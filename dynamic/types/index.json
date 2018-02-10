@@ -1,0 +1,12 @@
+{"type": "dir",
+ "href" : "http://iotoy.org/types/",
+ "help" : "List of types that are valid at iotoy.org",
+ "value": ["bool",
+           "exception",
+           "float",
+           "function",
+           "index",
+           "int",
+           "json",
+           "str"]
+}

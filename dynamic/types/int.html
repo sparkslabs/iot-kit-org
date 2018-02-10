@@ -1,0 +1,40 @@
+<html>
+<body>
+<h1> iotoy.org/types/int  </h1><P> Note that the constraints specification is not fully decided yet, and as such should be interpreted as a person not as a machine. This will hopefully be tightened up
+<P>Please note, if you use a client that does not say "Accept: text/html" or 
+similar, then you will get a response of application/json - suitable for
+machine parsing.
+<pre>
+{
+    "name" : "int",
+    "description" : "Integer number values",
+    "fieldspec" : {
+        "value": {
+            "regex" : "^[-+]?[0-9]+$",
+            "constraint" : "($REPRESENTATION &lt; 2147483648) and ($REPRESENTATION &gt; -2147483649)",
+            "interpretation" : "integer",
+            "note" : "This constrains integers to 32 bit signed values rather than the usual 53 bit values for Javascript. This is to play nicely with constrained hardware."
+        },
+        "href" : {
+            "regex" : "^/([a-zA-Z_][a-zA-Z_0-9]*)(/([a-zA-Z_][a-zA-Z_0-9]*))*$",
+            "constraint" : "(length($1)&lt;30 and length($3)&lt;30)",
+            "interpretation" : "resourceid",
+            "note" : "This should be the canonical URL path for the resource generally speaking - ala /some/resource/5",
+        }, 
+        "help" : {
+            "regex" : "^\".*\"$",
+            "constraint" : null,
+            "interpretation" : "string",
+            "note": "This is human readable text intended to convey to the user something about this value"
+        },
+        "type" : {
+            "regex" : "^iotoy.org/types/int$",
+            "constraint" : null,
+            "interpretation" : "url description the type and constraints on the value",
+            "note" : "Represents a link back to this description"            
+        }
+    }
+}
+</pre>
+</body>
+</html>
