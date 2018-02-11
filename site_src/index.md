@@ -1,6 +1,3 @@
----
-Title: IOT-KIT -- An IOT Stack for an Internet of Things of Yours
----
 # IOT-KIT
 ## An IOT Stack for an Internet of Things of Yours
 
@@ -14,11 +11,11 @@ Things Of Yours"
 
 The toolkit can be found here on github:
 
-* https://github.com/sparkslabs/iot-kit
+* <https://github.com/sparkslabs/iot-kit>
 
 The types used within the iotoy protocols are defined below here:
 
-* http://iotoy.org/types/
+* <http://iotoy.org/types/>
 
 You can create types for your devices though trivially.
 
